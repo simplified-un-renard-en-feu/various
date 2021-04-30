@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\Taro\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Taro\\.nuget\\packages"
+    ]
+  }
+}

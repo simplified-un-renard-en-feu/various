@@ -1,0 +1,16 @@
+C:\Users\Taro\source\repos\various\dotnet\href_downloader\bin\Debug\net5.0\href_downloader.exe
+C:\Users\Taro\source\repos\various\dotnet\href_downloader\bin\Debug\net5.0\href_downloader.deps.json
+C:\Users\Taro\source\repos\various\dotnet\href_downloader\bin\Debug\net5.0\href_downloader.runtimeconfig.json
+C:\Users\Taro\source\repos\various\dotnet\href_downloader\bin\Debug\net5.0\href_downloader.runtimeconfig.dev.json
+C:\Users\Taro\source\repos\various\dotnet\href_downloader\bin\Debug\net5.0\href_downloader.dll
+C:\Users\Taro\source\repos\various\dotnet\href_downloader\bin\Debug\net5.0\ref\href_downloader.dll
+C:\Users\Taro\source\repos\various\dotnet\href_downloader\bin\Debug\net5.0\href_downloader.pdb
+C:\Users\Taro\source\repos\various\dotnet\href_downloader\obj\Debug\net5.0\href_downloader.csprojAssemblyReference.cache
+C:\Users\Taro\source\repos\various\dotnet\href_downloader\obj\Debug\net5.0\href_downloader.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Taro\source\repos\various\dotnet\href_downloader\obj\Debug\net5.0\href_downloader.AssemblyInfoInputs.cache
+C:\Users\Taro\source\repos\various\dotnet\href_downloader\obj\Debug\net5.0\href_downloader.AssemblyInfo.cs
+C:\Users\Taro\source\repos\various\dotnet\href_downloader\obj\Debug\net5.0\href_downloader.csproj.CoreCompileInputs.cache
+C:\Users\Taro\source\repos\various\dotnet\href_downloader\obj\Debug\net5.0\href_downloader.dll
+C:\Users\Taro\source\repos\various\dotnet\href_downloader\obj\Debug\net5.0\ref\href_downloader.dll
+C:\Users\Taro\source\repos\various\dotnet\href_downloader\obj\Debug\net5.0\href_downloader.pdb
+C:\Users\Taro\source\repos\various\dotnet\href_downloader\obj\Debug\net5.0\href_downloader.genruntimeconfig.cache
