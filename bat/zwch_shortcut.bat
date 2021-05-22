@@ -34,7 +34,7 @@ set LNKNAME=%LNKNAME%.lnk
 IF "%2" EQU "" ( set /P ROOMID="Input Meeting ID:" )
 IF "%3" EQU "" ( set /P PWDHASH="Input Password Hash (press enter to skip):" )
 
-set LNKARG=/c .\zwc.bat "%ROOMID%" "%PWDHASH%"
+set LNKARG=/c .\zwch.bat %ROOMID% %PWDHASH%
 
 powershell -Command "& {$WshShell = New-Object -comObject WScript.Shell;$Shortcut = $WshShell.CreateShortcut('%LNKNAME%');$Shortcut.TargetPath = 'C:\Windows\system32\cmd.exe ';$Shortcut.Arguments = '%LNKARG%';$Shortcut.Save();}"
 timeout 3
