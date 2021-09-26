@@ -5,6 +5,7 @@ set Arg=%1
 
 IF "%1" EQU "" ( set /P Arg="Input Argument:" )
 
+cd %~dp0
 FOR /F %%i in ('type uri.txt') DO @SET Head=%%i
 
 set URL=%Head%%Arg%
