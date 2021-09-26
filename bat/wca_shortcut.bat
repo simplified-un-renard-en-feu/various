@@ -12,8 +12,8 @@ rem set ISCONFIRM=%3
 
 cd %~dp0
 
-echo absolute path mode: able to execute and move link anywhere but can't move zwch.bat
-echo relative path mode: able to move the parent folder but must execute link in the same folder with zwch.bat
+echo absolute path mode: able to execute and move link anywhere but can't move zwch.bat (for internal drive)
+echo relative path mode: able to move the parent folder but must execute link in the same folder with zwch.bat (for removable storage)
 echo;
 
 :isabsolute
