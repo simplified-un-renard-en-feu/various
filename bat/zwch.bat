@@ -8,7 +8,10 @@ set PWDHASH=%2
 
 rem "%n"は引数
 IF "%1" EQU "" ( set /P ROOMID="Input Meeting ID:" )
+set ROOMID=%ROOMID: =%
+
 rem IF "%2" EQU "" ( set /P PWDHASH="Input Password Hash:" )
+set PWDHASH=%PWDHASH: =%
 
 IF "%2" EQU "" (
   set URL=https://zoom.us/wc/join/%ROOMID%
@@ -16,8 +19,8 @@ IF "%2" EQU "" (
   set URL=https://zoom.us/j/%ROOMID%?pwd=%PWDHASH%
 )
 
-rem /j/以外にpwdを受け入れるURLはないのだろうか.
-rem firefoxとzoomの相性が悪いためEdgeを先頭.
+rem /j/以外にpwdを受け入れるURLは?
+rem firefoxとzoomの相性が悪いためEdgeを先頭に.
 rem https://qiita.com/Q11Q/items/e34af74330c29614cba1
 
 IF exist "\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" (
