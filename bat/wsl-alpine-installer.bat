@@ -33,16 +33,16 @@ pause
 
 echo.
 mkdir %WSLROOT%\%DNAME%
-rem wsl --import alpine-3.14 %USERPROFILE%\WSL\%DNAME% .\%ALPINEFILE%
+wsl --import alpine-3.14 %USERPROFILE%\WSL\%DNAME% .\%ALPINEFILE%
 del %ALPINEFILE%
-rem wsl -d %DNAME% /usr/sbin/adduser -D %USRNAME%
+wsl -d %DNAME% /usr/sbin/adduser -D %USRNAME%
 wsl -d %DNAME% apk update ^&^& apk add libstdc++ alpine-sdk
 wsl -d %DNAME% cd /root; echo "date;cd~" \> .profile
 wsl -d %DNAME% cd /home/%USRNAME%; echo "date;cd~" \> .profile
 
 
 cd %APPDATA%\Microsoft\Windows\Start Menu\Programs
-echo powershell -Command "& {$WshShell = New-Object -comObject WScript.Shell;$Shortcut = $WshShell.CreateShortcut('wsl %DNAME%');$Shortcut.TargetPath = 'ewsl';$Shortcut.Arguments = '-d %DNAME%';$Shortcut.Save();}"
+echo powershell -Command "& {$WshShell = New-Object -comObject WScript.Shell;$Shortcut = $WshShell.CreateShortcut('wsl %DNAME%');$Shortcut.TargetPath = 'wsl';$Shortcut.Arguments = '-d %DNAME%';$Shortcut.Save();}"
 
 
 echo.
