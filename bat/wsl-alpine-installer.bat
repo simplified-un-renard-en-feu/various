@@ -43,14 +43,15 @@ wsl -d %DNAME% cd /home/%USRNAME%; echo "date;cd~" \> .profile
 
 
 cd %APPDATA%\Microsoft\Windows\Start Menu\Programs
-echo powershell -Command "& {$WshShell = New-Object -comObject WScript.Shell;$Shortcut = $WshShell.CreateShortcut('wsl %DNAME%');$Shortcut.TargetPath = 'wsl';$Shortcut.Arguments = '-d %DNAME%';$Shortcut.Save();}"
+powershell -Command "& {$WshShell = New-Object -comObject WScript.Shell;$Shortcut = $WshShell.CreateShortcut('WSL %DNAME%.lnk');$Shortcut.TargetPath = 'wsl';$Shortcut.Arguments = '-d %DNAME%';$Shortcut.Save();}"
+powershell -Command "& {$WshShell = New-Object -comObject WScript.Shell;$Shortcut = $WshShell.CreateShortcut('WSL %DNAME% normal-user.lnk');$Shortcut.TargetPath = 'wsl';$Shortcut.Arguments = '-d %DNAME% -u %USRNAME%';$Shortcut.Save();}"
 
 
 echo.
 echo ##########################################################
-echo ##スタートメニューにwsl %DNAME%が追加されました
-echo ##次回以降はスタートメニューのショートカットまたはwsl -d %DNAME% -u %USRNAME% で起動されます
+echo ##スタートメニューに「wsl %DNAME%」と%USRNAME%ログインの「WSL %DNAME% normal-user」が追加されました
+echo ##次回以降はスタートメニューのショートカットまたはwsl -d %DNAME% (-u %USRNAME%) で起動されます
 echo ##su %USRNAME% をwsl上で実行して管理者シェルから一般ユーザーシェルに移動します
-echo ## "wsl -d %DNAME% cd ~; echo 'date; su alpine' ^> .profile" を実行して起動時ログインを一般ユーザーに変更します
+rem ## "wsl -d %DNAME% cd ~; echo 'date; su alpine' ^> .profile" を実行して起動時ログインを一般ユーザーに変更します
 echo ##########################################################
 pause
