@@ -1,6 +1,7 @@
 @echo off
 
-rem このファイルはANSI形式で保存してください
+rem このファイルはANSI形式(CP932)で保存してください
+rem Save this file with ANSI (CP932) encoding
 
 echo.
 echo ##wslにalpineをwsl --importで導入するスクリプト
