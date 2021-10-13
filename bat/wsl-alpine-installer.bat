@@ -8,6 +8,7 @@ echo ##wslにalpineをwsl --importで導入するスクリプト
 echo ##https://dev.to/milolav/manually-installing-wsl2-distributions-41b4 , 
 echo ##https://docs.microsoft.com/ja-jp/windows/wsl/use-custom-distro を参照
 echo ##2021/10/06作成
+rem 21/10/13 VS Codeの拡張機能「C/C++」(cpptools)がalpineのライブラリのせいで使用に難あり 参照: https://stackoverflow.com/questions/66963068/docker-alpine-executable-binary-not-found-even-if-in-path
 echo.
 echo.
 
