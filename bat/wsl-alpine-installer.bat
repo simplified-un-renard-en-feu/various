@@ -38,20 +38,20 @@ wsl --import alpine-3.14 %USERPROFILE%\WSL\%DNAME% .\%ALPINEFILE%
 del %ALPINEFILE%
 wsl -d %DNAME% /usr/sbin/adduser -D %USRNAME%
 wsl -d %DNAME% apk update ^&^& apk add libstdc++ alpine-sdk
-wsl -d %DNAME% cd /root; echo "date;cd~" \> .profile
-wsl -d %DNAME% cd /home/%USRNAME%; echo "date;cd~" \> .profile
-
+wsl -d %DNAME% cd /root; echo "date;cd ~" ^> .profile
+wsl -d %DNAME% cd /home/%USRNAME%; echo "date;cd ~" ^> .profile
+wsl -d %DNAME% echo -e "[user]\ndefault=%USRNAME%" ^> /etc/wsl.conf 
+wsl -d %DNAME% --shutdown
 
 cd %APPDATA%\Microsoft\Windows\Start Menu\Programs
-powershell -Command "& {$WshShell = New-Object -comObject WScript.Shell;$Shortcut = $WshShell.CreateShortcut('WSL %DNAME%.lnk');$Shortcut.TargetPath = 'wsl';$Shortcut.Arguments = '-d %DNAME%';$Shortcut.Save();}"
+powershell -Command "& {$WshShell = New-Object -comObject WScript.Shell;$Shortcut = $WshShell.CreateShortcut('WSL %DNAME% root.lnk');$Shortcut.TargetPath = 'wsl';$Shortcut.Arguments = '-d %DNAME% -u root';$Shortcut.Save();}"
 powershell -Command "& {$WshShell = New-Object -comObject WScript.Shell;$Shortcut = $WshShell.CreateShortcut('WSL %DNAME% normal-user.lnk');$Shortcut.TargetPath = 'wsl';$Shortcut.Arguments = '-d %DNAME% -u %USRNAME%';$Shortcut.Save();}"
 
 
 echo.
 echo ##########################################################
 echo ##スタートメニューに「wsl %DNAME%」と%USRNAME%ログインの「WSL %DNAME% normal-user」が追加されました
-echo ##次回以降はスタートメニューのショートカットまたはwsl -d %DNAME% (-u %USRNAME%) で起動されます
+echo ##次回以降はスタートメニューのショートカットまたはwsl -d %DNAME% -u [%USRNAME%またはroot] で起動できます
 echo ##su %USRNAME% をwsl上で実行して管理者シェルから一般ユーザーシェルに移動します
-rem ## "wsl -d %DNAME% cd ~; echo 'date; su alpine' ^> .profile" を実行して起動時ログインを一般ユーザーに変更します
 echo ##########################################################
 pause
